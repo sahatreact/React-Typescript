@@ -1,13 +1,11 @@
-import { UserContextProvider } from "./components/context/UserContext";
-import { User } from "./components/context/User";
 import "./App.css";
-import { MutableRef } from "./components/ref/MutableRef";
-import { Counter } from "./components/class/Counter";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
 
 function App() {
   return (
     <div className="App">
-      <Counter message="The count value is" />
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
